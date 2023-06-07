@@ -5,8 +5,6 @@ import { Inter } from 'next/font/google'
 import Header from '@/Components/Header';
 import { useState } from 'react';
 
-//https://www.igdb.com/ fonte dos posters
-
 const inter = Inter({ subsets: ['latin'] })
 /*const filmes = [
   {
@@ -46,7 +44,7 @@ export default function Home() {
     }
   };
   
-  fetch('https://api.rawg.io/api/games?key=f834e841be0d483bb9c5ce07b2cbc5da&dates=2019-09-01,2019-09-30&platforms=18,1,7', options)
+  fetch('https://api.rawg.io/api/games?key=f834e841be0d483bb9c5ce07b2cbc5da&dates=2019-09-01,2022-09-30&platforms=18,1,7', options)
     .then(response => response.json())
     .then(response => setJogos(response.results))
     .catch(err => console.error(err));
