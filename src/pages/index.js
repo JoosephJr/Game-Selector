@@ -8,29 +8,29 @@ import { useState } from 'react';
 const inter = Inter({ subsets: ['latin'] })
 /*const filmes = [
   {
-    titulo: "God of War - Ragnarok",
-    nota: "9.2",
-    poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/co5s5v.png"
+    name: "God of War - Ragnarok",
+    rating: "9.2",
+    background_image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co5s5v.png"
   },
   {
-    titulo: "Hogwarts Legacy Deluxe",
-    nota: "9.0",
-    poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/co54qe.png"
+    name: "Hogwarts Legacy Deluxe",
+    rating: "9.0",
+    background_image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co54qe.png"
   },
   {
-    titulo: "Resident Evil 4 Remake",
-    nota: "9.5",
-    poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6bo0.png"
+    name: "Resident Evil 4 Remake",
+    rating: "9.5",
+    background_image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6bo0.png"
   },
   {
-    titulo: "The Last  of Us - Part II",
-    nota: "9.7",
-    poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/co5ziw.png"
+    name: "The Last  of Us - Part II",
+    rating: "9.7",
+    background_image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co5ziw.png"
   },
   {
-    titulo: "FIFA 23",
-    nota: "8.8",
-    poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/co4zw5.png"
+    name: "FIFA 23",
+    rating: "8.8",
+    background_image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co4zw5.png"
   }
 ]*/
 export default function Home() {
@@ -44,7 +44,7 @@ export default function Home() {
     }
   };
   
-  fetch('https://api.rawg.io/api/games?key=f834e841be0d483bb9c5ce07b2cbc5da&dates=2019-09-01,2022-09-30&platforms=18,1,7', options)
+  fetch('https://api.rawg.io/api/games?key=f834e841be0d483bb9c5ce07b2cbc5da&dates=2019-09-01,2022-05-30&platforms=18,1,7', options)
     .then(response => response.json())
     .then(response => setJogos(response.results))
     .catch(err => console.error(err));
@@ -66,13 +66,7 @@ export default function Home() {
           <SecaoFilmes filmes={jogos} />
         </div>
 
-        <Titulo>Ação</Titulo>
-
-        <Titulo>Esportes</Titulo>
-
-        <Titulo>Clássicos</Titulo>
-
-      </main>//JSX
+      </main>
     </>
   )
 }
